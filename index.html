@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebecca Casati | PhD Student in Physics & Quantum Computing</title>
+    <meta name="description" content="Personal website of Rebecca Casati, PhD Student in Physics and Astrophysics specializing in Quantum Computing, Milan, Italy.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background Canvas for Interactive Particles -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">RC<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero / About Section -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <p class="greeting">Hello, I'm</p>
+                <h1 class="glitch" data-text="Rebecca Casati">Rebecca Casati</h1>
+                <h2 class="role">PhD Student in Physics <span>&middot;</span> Quantum Computing</h2>
+                <p class="summary">
+                    Exploring the intersection of quantum mechanics, artificial intelligence, and astrophysics. 
+                    Currently advancing quantum computing algorithms for space and maritime applications.
+                </p>
+                
+                <div class="social-links">
+                    <a href="mailto:rebecca.casati@unimi.it" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/rebecca-casati/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/rebeccacasati" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://orcid.org/0009-0006-4074-4022" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a>
+                    <span class="location"><i class="fas fa-map-marker-alt"></i> Milan, Italy</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience Section -->
+        <section id="experience" class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                
+                <div class="timeline-item appear">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <div class="timeline-header">
+                            <h3>PhD Student in Physics, Astrophysics and Applied Physics</h3>
+                            <span class="timeline-date">Oct. 2024 - Sept. 2027</span>
+                        </div>
+                        <h4 class="institute">University of Milan (Milan, Italy)</h4>
+                        <ul class="duties">
+                            <li><strong>Scholarship:</strong> co-funded by NATO STO CMRE</li>
+                            <li><strong>Project:</strong> Quantum computing algorithms for maritime and underwater applications.</li>
+                            <li><strong>Group:</strong> Quantum Intelligence Lab (Supervisor: Prof. Enrico Prati)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item appear">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <div class="timeline-header">
+                            <h3>Visiting Research Fellow</h3>
+                            <span class="timeline-date">Oct. 2025 - Mar. 2026</span>
+                        </div>
+                        <h4 class="institute">Waseda University (Tokyo, Japan)</h4>
+                        <ul class="duties">
+                            <li><strong>Project:</strong> Quantum computing for quantum sensing with NV centers.</li>
+                            <li>Simulating Nitrogen-vacancy center behavior under NMR measurements and managing quantum data output via QML.</li>
+                            <li><strong>Group:</strong> Quantum Sensing group, Tanii-lab.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item appear">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <div class="timeline-header">
+                            <h3>Researcher - Collaborator</h3>
+                            <span class="timeline-date">Aug. 2025 - Mar. 2027</span>
+                        </div>
+                        <h4 class="institute">National Research Council (IFN-CNR) (Milan, Italy)</h4>
+                        <ul class="duties">
+                            <li><strong>Project:</strong> Quantum computing and quantum data processing for advanced applications.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item appear">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <div class="timeline-header">
+                            <h3>Teaching Assistant</h3>
+                            <span class="timeline-date">Feb. - May 2025</span>
+                        </div>
+                        <h4 class="institute">University of Milan (Milan, Italy)</h4>
+                        <ul class="duties">
+                            <li><strong>Course:</strong> Foundations of Quantum Computing (Master's in AI).</li>
+                            <li>Taught introductory coding classes on programming quantum circuits with Pennylane.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item appear">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <div class="timeline-header">
+                            <h3>Researcher - External Collaborator</h3>
+                            <span class="timeline-date">Mar. - July 2024</span>
+                        </div>
+                        <h4 class="institute">University of Milan - Physics Department</h4>
+                        <ul class="duties">
+                            <li><strong>Fundings:</strong> Italian Space Agency (ASI).</li>
+                            <li><strong>Project:</strong> CQES - Quantum Computers and Space Exploration.</li>
+                            <li>Solved space-related optimization problems (job shop scheduling) using D-Wave's quantum annealers.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="cards-grid">
+                
+                <div class="card glass-panel appear">
+                    <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Master's in Artificial Intelligence for Science and Technology</h3>
+                    <h4>University of Milan-Bicocca, U. of Milan, U. of Pavia</h4>
+                    <p class="date">Oct. 2022 - Sept. 2024</p>
+                    <p class="grade">Final Mark: 110/110 cum Laude</p>
+                    <p class="thesis"><strong>Thesis:</strong> Adiabatic Quantum Computing for Space Missions Scheduling.</p>
+                </div>
+
+                <div class="card glass-panel appear">
+                    <div class="card-icon"><i class="fas fa-university"></i></div>
+                    <h3>Bachelor's degree in Physics</h3>
+                    <h4>University of Milan-Bicocca</h4>
+                    <p class="date">Sept. 2019 - Nov. 2022</p>
+                    <p class="grade">Final Mark: 109/110</p>
+                    <p class="thesis"><strong>Thesis:</strong> Use of gold nanoparticles for neuronal stimulation.</p>
+                </div>
+
+            </div>
+            
+            <h3 class="subsection-title">Research Schools</h3>
+            <div class="glass-panel appear outline-card">
+                <h4>LMS Research School 'Quantum Machine Learning and Hamiltonian Simulation'</h4>
+                <p>ICMS - International Centre for Mathematical Sciences (Sleat, Scotland) <span>&middot;</span> 8-13 June 2025</p>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="container">
+            <h2 class="section-title">Publications & Presentations</h2>
+            <div class="publications-list">
+                
+                <div class="pub-item appear glass-panel">
+                    <p class="authors">Rebecca Casati, Thomas Giudici, Pietro Torta, Enrico Prati.</p>
+                    <h4 class="pub-title">Iterative Quantum Annealing for Job Shop Scheduling with a Directed Graph Representation.</h4>
+                    <p class="venue">In: <em>2025 IEEE International Conference on Quantum Computing and Engineering (QCE)</em>. 2025.</p>
+                    <a href="https://doi.org/10.1109/QCE65121.2025.00236" target="_blank" class="doi-link">DOI: 10.1109/QCE65121.2025.00236</a>
+                </div>
+
+                <div class="pub-item appear glass-panel">
+                    <p class="authors">Pietro Torta, Rebecca Casati, Stefano Bruni, Antonio Mandarino, Enrico Prati.</p>
+                    <h4 class="pub-title">Quantum Computing for Space Applications: a Selective Review and Perspective.</h4>
+                    <p class="venue">In: <em>EPJ Quantum Technology 12, 66 (2025)</em>.</p>
+                    <a href="https://doi.org/10.1140/epjqt/s40507-025-00369-8" target="_blank" class="doi-link">DOI: 10.1140/epjqt/s40507-025-00369-8</a>
+                </div>
+
+                <div class="pub-item appear glass-panel">
+                    <p class="authors">Rebecca Casati and Enrico Prati.</p>
+                    <h4 class="pub-title">Exploiting adiabatic quantum computing in deep space missions.</h4>
+                    <p class="venue">In: <em>Journal of Physics: Conference Series</em>. 2025, vol. 3017. 1., p. 012042.</p>
+                    <a href="https://doi.org/10.1088/1742-6596/3017/1/012042" target="_blank" class="doi-link">DOI: 10.1088/1742-6596/3017/1/012042</a>
+                </div>
+                
+                <div class="pub-item appear glass-panel">
+                    <p class="authors">Pietro Torta, Luca Leone, Rebecca Casati, and Enrico Prati.</p>
+                    <h4 class="pub-title">Neural Quantum Annealing for Real-World Quadratic Unconstrained Binary Optimization.</h4>
+                    <p class="venue">In: <em>2024 IEEE International Conference on Quantum Computing and Engineering (QCE)</em>. Vol. 02. 2024, pp. 514–515.</p>
+                    <a href="https://doi.org/10.1109/QCE60285.2024.10382" target="_blank" class="doi-link">DOI: 10.1109/QCE60285.2024.10382</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                
+                <div class="skill-category glass-panel appear">
+                    <h3><i class="fas fa-terminal"></i> Programming</h3>
+                    <div class="tags">
+                        <span>Python</span><span>R</span><span>MATLAB</span><span>LaTeX</span><span>C/C++</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-panel appear">
+                    <h3><i class="fas fa-atom"></i> Quantum Computing</h3>
+                    <div class="tags">
+                        <span>Qiskit</span><span>Pennylane</span><span>D-Wave Ocean SDK</span>
+                        <span class="cloud">D-Wave Leap</span><span class="cloud">Azure Quantum</span><span class="cloud">IBM Quantum</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-panel appear">
+                    <h3><i class="fas fa-laptop-code"></i> Classical Libraries</h3>
+                    <div class="tags">
+                        <span>PyTorch</span><span>PyTorch Geometric</span><span>DGL</span><span>Gurobi</span>
+                        <span>Scikit-learn</span><span>Pandas</span><span>NumPy</span><span>NetworkX</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category glass-panel appear">
+                    <h3><i class="fas fa-globe"></i> Languages</h3>
+                    <div class="tags">
+                        <span>Italian (Native)</span><span>English (C1 Advanced)</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Rebecca Casati. Designed and built with logic & aesthetics.</p>
+            <div class="social-links-footer">
+                <a href="https://github.com/rebeccacasati"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/rebecca-casati/"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
