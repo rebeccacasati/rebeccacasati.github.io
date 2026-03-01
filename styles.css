@@ -291,6 +291,27 @@ nav.scrolled {
     box-shadow: 0 0 10px var(--accent-glow);
 }
 
+.timeline-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.timeline-logo {
+    height: 60px;
+    max-width: 150px;
+    object-fit: contain;
+    opacity: 0.85;
+    transition: opacity var(--transition-normal);
+    filter: brightness(1.1);
+}
+
+.timeline-content:hover .timeline-logo {
+    opacity: 1;
+}
+
 .timeline-header {
     display: flex;
     justify-content: space-between;
@@ -585,6 +606,11 @@ footer {
     .timeline-header {
         flex-direction: column;
         gap: 0.5rem;
+    }
+    
+    .timeline-logo {
+        height: 50px;
+        max-width: 120px;
     }
     
     .footer-content {
