@@ -243,6 +243,10 @@ nav.scrolled {
     transition: transform var(--transition-fast), color var(--transition-fast);
 }
 
+.social-links .fa-orcid {
+    color: #BACE59;
+}
+
 .social-links a:hover {
     color: var(--accent-blue);
     transform: translateY(-3px);
