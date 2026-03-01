@@ -382,6 +382,13 @@ nav.scrolled {
     margin-bottom: 0.5rem;
 }
 
+.purple-date {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--accent-purple) !important;
+    margin-bottom: 0.5rem;
+}
+
 .card .grade {
     font-family: var(--font-mono);
     font-size: 0.9rem;
