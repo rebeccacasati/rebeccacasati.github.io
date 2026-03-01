@@ -236,12 +236,20 @@ nav.scrolled {
 
 .summary-list {
     margin: 0.75rem 0 0;
-    padding-left: 1.5rem;
+    padding-left: 2em;
     color: inherit;
 }
 
 .summary-list li + li {
     margin-top: 0.35rem;
+}
+
+.summary-list li:first-child {
+    color: var(--accent-purple);
+}
+
+.summary-list li:last-child {
+    color: var(--accent-blue);
 }
 
 .social-links {
