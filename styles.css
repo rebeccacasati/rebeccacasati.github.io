@@ -390,6 +390,12 @@ nav.scrolled {
     margin-bottom: 0.5rem;
 }
 
+.outline-card .date {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--accent-purple);
+}
+
 .card .grade {
     font-family: var(--font-mono);
     font-size: 0.9rem;
