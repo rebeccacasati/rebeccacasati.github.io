@@ -580,7 +580,7 @@ footer {
 }
 
 .social-links-footer a {
-    color: var(--accent-blue);
+    color: var(--text-muted);
     font-size: 1.2rem;
 }
 
