@@ -296,6 +296,17 @@ nav.scrolled {
     padding-left: 110px;
 }
 
+.timeline-logo-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 90px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .timeline-logo {
     height: 45px;
     max-width: 80px;
@@ -602,6 +613,12 @@ footer {
     
     .timeline-content {
         padding-left: 0;
+    }
+    
+    .timeline-logo-container {
+        position: static;
+        transform: none;
+        margin-bottom: 1rem;
     }
     
     .timeline-logo {
