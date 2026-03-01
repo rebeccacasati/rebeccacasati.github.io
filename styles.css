@@ -381,8 +381,7 @@ nav.scrolled {
     color: var(--text-main);
 }
 
-.duties .project-item,
-.duties .project-item strong {
+.duties .project-item .project-text {
     font-style: italic;
 }
 
