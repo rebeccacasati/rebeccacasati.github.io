@@ -248,10 +248,6 @@ nav.scrolled {
     transform: translateY(-3px);
 }
 
-.orcid-icon {
-    color: #BACE59 !important;
-}
-
 .location {
     font-family: var(--font-mono);
     color: var(--text-muted);
