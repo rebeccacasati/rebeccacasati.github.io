@@ -230,6 +230,20 @@ nav.scrolled {
     margin-bottom: 2.5rem;
 }
 
+.summary p {
+    margin: 0;
+}
+
+.summary-list {
+    margin: 0.75rem 0 0;
+    padding-left: 1.5rem;
+    color: inherit;
+}
+
+.summary-list li + li {
+    margin-top: 0.35rem;
+}
+
 .social-links {
     display: flex;
     align-items: center;
