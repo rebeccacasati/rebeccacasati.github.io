@@ -1,8 +1,32 @@
 // Wait for DOM to load
 document.addEventListener('DOMContentLoaded', () => {
+    const body = document.body;
 
     /* --- Navbar Scroll Effect --- */
     const navbar = document.getElementById('navbar');
+    const themeToggle = document.querySelector('.theme-toggle');
+    const themeToggleIcon = themeToggle.querySelector('i');
+    const storedTheme = localStorage.getItem('theme');
+    const prefersLight = window.matchMedia('(prefers-color-scheme: light)');
+
+    function getThemeValue(name) {
+        return getComputedStyle(body).getPropertyValue(name).trim();
+    }
+
+    function setTheme(theme, persist = true) {
+        body.dataset.theme = theme;
+        if (persist) {
+            localStorage.setItem('theme', theme);
+        }
+        const isLight = theme === 'light';
+        themeToggle.setAttribute('aria-pressed', String(isLight));
+        themeToggle.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+        themeToggleIcon.className = isLight ? 'fas fa-moon' : 'fa-regular fa-sun';
+
+        if (window.innerWidth <= 768 && navLinks.style.display === 'flex') {
+            openMobileMenu();
+        }
+    }
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -16,21 +40,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
+    function openMobileMenu() {
+        navLinks.style.display = 'flex';
+        navLinks.style.flexDirection = 'column';
+        navLinks.style.position = 'absolute';
+        navLinks.style.top = '70px';
+        navLinks.style.left = '0';
+        navLinks.style.width = '100%';
+        navLinks.style.background = getThemeValue('--nav-mobile-bg');
+        navLinks.style.backdropFilter = 'blur(10px)';
+        navLinks.style.padding = '2rem';
+        navLinks.style.borderBottom = `1px solid ${getThemeValue('--glass-border')}`;
+    }
+
+    setTheme(storedTheme || (prefersLight.matches ? 'light' : 'dark'), Boolean(storedTheme));
+
+    themeToggle.addEventListener('click', () => {
+        setTheme(body.dataset.theme === 'light' ? 'dark' : 'light');
+    });
+
     // Simple toggle (you could expand this with a proper sliding menu)
     hamburger.addEventListener('click', () => {
         if (navLinks.style.display === 'flex') {
             navLinks.style.display = 'none';
         } else {
-            navLinks.style.display = 'flex';
-            navLinks.style.flexDirection = 'column';
-            navLinks.style.position = 'absolute';
-            navLinks.style.top = '70px';
-            navLinks.style.left = '0';
-            navLinks.style.width = '100%';
-            navLinks.style.background = 'rgba(10, 11, 16, 0.95)';
-            navLinks.style.backdropFilter = 'blur(10px)';
-            navLinks.style.padding = '2rem';
-            navLinks.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+            openMobileMenu();
         }
     });
 
@@ -127,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         draw() {
-            ctx.fillStyle = 'rgba(0, 229, 255, 0.5)';
+            ctx.fillStyle = getThemeValue('--canvas-particle');
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.closePath();
@@ -178,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (distance < (w / 10) * (h / 10)) {
                     opacityValue = 1 - (distance / 20000);
-                    ctx.strokeStyle = `rgba(181, 51, 255, ${opacityValue * 0.2})`;
+                    ctx.strokeStyle = `rgba(${getThemeValue('--canvas-line-rgb')}, ${opacityValue * 0.2})`;
                     ctx.lineWidth = 1;
                     ctx.beginPath();
                     ctx.moveTo(particles[a].x, particles[a].y);
@@ -206,5 +240,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('resize', () => {
         initCanvas();
+    });
+
+    prefersLight.addEventListener('change', (event) => {
+        if (!localStorage.getItem('theme')) {
+            setTheme(event.matches ? 'light' : 'dark', false);
+        }
     });
 });

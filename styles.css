@@ -4,19 +4,84 @@
     --bg-light: #12141f;
     --text-main: #f0f0f5;
     --text-muted: #a0a5ba;
-    
+
     --accent-blue: #00e5ff;
     --accent-purple: #b533ff;
     --accent-glow: rgba(0, 229, 255, 0.4);
-    
+
     --glass-bg: rgba(255, 255, 255, 0.03);
     --glass-border: rgba(255, 255, 255, 0.08);
-    
+    --glass-border-strong: rgba(255, 255, 255, 0.15);
+    --logo-border: rgba(255, 255, 255, 0.18);
+    --panel-shadow: rgba(0, 0, 0, 0.3);
+    --panel-glow: rgba(0, 229, 255, 0.1);
+    --nav-scrolled-bg: rgba(10, 11, 16, 0.8);
+    --nav-mobile-bg: rgba(10, 11, 16, 0.95);
+    --page-background:
+        radial-gradient(circle at top left, rgba(0, 229, 255, 0.08), transparent 32%),
+        radial-gradient(circle at top right, rgba(181, 51, 255, 0.08), transparent 28%),
+        linear-gradient(180deg, #0a0b10 0%, #12141f 100%);
+    --heading-solid: #ffffff;
+    --hero-gradient-start: #ffffff;
+    --hero-gradient-end: #a0a5ba;
+    --tag-bg: rgba(255, 255, 255, 0.05);
+    --tag-border: rgba(255, 255, 255, 0.1);
+    --tag-hover-bg: rgba(0, 229, 255, 0.1);
+    --tag-hover-border: rgba(0, 229, 255, 0.3);
+    --tag-hover-text: #ffffff;
+    --tag-cloud-bg: rgba(181, 51, 255, 0.05);
+    --tag-cloud-border: rgba(181, 51, 255, 0.2);
+    --tag-cloud-hover-bg: rgba(181, 51, 255, 0.15);
+    --tag-cloud-hover-border: rgba(181, 51, 255, 0.4);
+    --timeline-chip-bg: rgba(181, 51, 255, 0.1);
+    --type-chip-bg: rgba(0, 229, 255, 0.1);
+    --canvas-particle: rgba(0, 229, 255, 0.5);
+    --canvas-line-rgb: 181, 51, 255;
+
     --font-sans: 'Outfit', sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
-    
+
     --transition-fast: 0.2s ease;
     --transition-normal: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+body[data-theme='light'] {
+    --bg-dark: #fcfcfd;
+    --bg-light: #eef2f6;
+    --text-main: #101828;
+    --text-muted: #526076;
+    --accent-blue: #4a8dff;
+    --accent-purple: #ff6fae;
+    --accent-glow: rgba(74, 141, 255, 0.22);
+    --glass-bg: rgba(255, 255, 255, 0.46);
+    --glass-border: rgba(16, 24, 40, 0.08);
+    --glass-border-strong: rgba(16, 24, 40, 0.14);
+    --logo-border: rgba(16, 24, 40, 0.18);
+    --panel-shadow: rgba(15, 23, 42, 0.08);
+    --panel-glow: rgba(74, 141, 255, 0.12);
+    --nav-scrolled-bg: rgba(252, 252, 253, 0.72);
+    --nav-mobile-bg: rgba(252, 252, 253, 0.84);
+    --page-background:
+        radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.95), transparent 28%),
+        radial-gradient(circle at 85% 10%, rgba(229, 236, 245, 0.82), transparent 24%),
+        radial-gradient(circle at 70% 65%, rgba(255, 255, 255, 0.72), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #f6f7f9 34%, #edf1f5 67%, #ffffff 100%);
+    --heading-solid: #101828;
+    --hero-gradient-start: #101828;
+    --hero-gradient-end: #526076;
+    --tag-bg: rgba(255, 255, 255, 0.9);
+    --tag-border: rgba(16, 24, 40, 0.08);
+    --tag-hover-bg: rgba(74, 141, 255, 0.16);
+    --tag-hover-border: rgba(74, 141, 255, 0.3);
+    --tag-hover-text: #101828;
+    --tag-cloud-bg: rgba(255, 111, 174, 0.1);
+    --tag-cloud-border: rgba(255, 111, 174, 0.2);
+    --tag-cloud-hover-bg: rgba(255, 111, 174, 0.18);
+    --tag-cloud-hover-border: rgba(255, 111, 174, 0.32);
+    --timeline-chip-bg: rgba(255, 111, 174, 0.14);
+    --type-chip-bg: rgba(74, 141, 255, 0.14);
+    --canvas-particle: rgba(74, 141, 255, 0.26);
+    --canvas-line-rgb: 255, 111, 174;
 }
 
 /* --- Base Reset --- */
@@ -32,6 +97,8 @@ html {
 
 body {
     background-color: var(--bg-dark);
+    background-image: var(--page-background);
+    background-attachment: fixed;
     color: var(--text-main);
     font-family: var(--font-sans);
     line-height: 1.6;
@@ -52,7 +119,7 @@ body {
 /* --- Typography --- */
 h1, h2, h3, h4 {
     font-weight: 600;
-    color: #fff;
+    color: var(--heading-solid);
 }
 
 a {
@@ -75,7 +142,7 @@ nav {
 }
 
 nav.scrolled {
-    background: rgba(10, 11, 16, 0.8);
+    background: var(--nav-scrolled-bg);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--glass-border);
 }
@@ -101,7 +168,7 @@ nav.scrolled {
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
-    border: 2px solid rgba(255, 255, 255, 0.18);
+    border: 2px solid var(--logo-border);
 }
 
 .nav-links {
@@ -139,6 +206,38 @@ nav.scrolled {
     color: var(--text-main);
 }
 
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    color: var(--text-main);
+    border-radius: 999px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    transition: transform var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.theme-toggle:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-blue);
+}
+
+.theme-toggle i {
+    color: var(--accent-blue);
+    font-size: 1rem;
+}
+
 /* --- Layout Containers --- */
 .container {
     max-width: 1000px;
@@ -174,15 +273,15 @@ nav.scrolled {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: 16px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(18px);
     padding: 2rem;
     transition: transform var(--transition-normal), box-shadow var(--transition-normal), border var(--transition-normal);
 }
 
 .glass-panel:hover {
     transform: translateY(-5px);
-    border-color: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 229, 255, 0.1);
+    border-color: var(--glass-border-strong);
+    box-shadow: 0 10px 30px var(--panel-shadow), 0 0 20px var(--panel-glow);
 }
 
 /* --- Hero Section --- */
@@ -232,7 +331,8 @@ nav.scrolled {
     font-size: clamp(3rem, 8vw, 5.5rem);
     line-height: 1.1;
     margin-bottom: 1rem;
-    background: linear-gradient(to right, #fff, #a0a5ba);
+    color: var(--heading-solid);
+    background: linear-gradient(to right, var(--hero-gradient-start), var(--hero-gradient-end));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -366,14 +466,14 @@ nav.scrolled {
 
 .timeline-header h3 {
     font-size: 1.3rem;
-    color: #fff;
+    color: var(--heading-solid);
 }
 
 .timeline-date {
     font-family: var(--font-mono);
     font-size: 0.85rem;
     color: var(--accent-purple);
-    background: rgba(181, 51, 255, 0.1);
+    background: var(--timeline-chip-bg);
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
     white-space: nowrap;
@@ -519,7 +619,7 @@ nav.scrolled {
     color: var(--accent-blue);
     font-family: var(--font-mono);
     font-size: 0.85rem;
-    background: rgba(0, 229, 255, 0.1);
+    background: var(--type-chip-bg);
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
 }
@@ -666,8 +766,8 @@ nav.scrolled {
 }
 
 .tags span {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--tag-bg);
+    border: 1px solid var(--tag-border);
     padding: 0.4rem 0.8rem;
     border-radius: 4px;
     font-size: 0.9rem;
@@ -675,20 +775,20 @@ nav.scrolled {
 }
 
 .tags span:hover {
-    background: rgba(0, 229, 255, 0.1);
-    border-color: rgba(0, 229, 255, 0.3);
+    background: var(--tag-hover-bg);
+    border-color: var(--tag-hover-border);
     transform: translateY(-2px);
-    color: #fff;
+    color: var(--tag-hover-text);
 }
 
 .tags span.cloud {
-    background: rgba(181, 51, 255, 0.05);
-    border-color: rgba(181, 51, 255, 0.2);
+    background: var(--tag-cloud-bg);
+    border-color: var(--tag-cloud-border);
 }
 
 .tags span.cloud:hover {
-    background: rgba(181, 51, 255, 0.15);
-    border-color: rgba(181, 51, 255, 0.4);
+    background: var(--tag-cloud-hover-bg);
+    border-color: var(--tag-cloud-hover-border);
 }
 
 /* --- Footer --- */
@@ -745,9 +845,14 @@ footer {
     .nav-links {
         display: none; /* Can add proper mobile menu JS if needed */
     }
-    
+
     .hamburger {
         display: block;
+    }
+
+    .theme-toggle {
+        width: 42px;
+        height: 42px;
     }
 
     .hero h1 {
