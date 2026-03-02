@@ -512,6 +512,18 @@ nav.scrolled {
     gap: 1.5rem;
 }
 
+.pub-item {
+    position: relative;
+    padding-top: 3.6rem;
+}
+
+.pub-item .timeline-date {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    white-space: nowrap;
+}
+
 .pub-item .authors {
     font-size: 0.9rem;
     color: var(--text-muted);
