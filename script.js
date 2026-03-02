@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.querySelector('.theme-toggle');
     const themeToggleIcon = themeToggle.querySelector('i');
     const storedTheme = localStorage.getItem('theme');
-    const prefersLight = window.matchMedia('(prefers-color-scheme: light)');
 
     function getThemeValue(name) {
         return getComputedStyle(body).getPropertyValue(name).trim();
@@ -53,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.style.borderBottom = `1px solid ${getThemeValue('--glass-border')}`;
     }
 
-    setTheme(storedTheme || (prefersLight.matches ? 'light' : 'dark'), Boolean(storedTheme));
+    setTheme(storedTheme || 'dark', Boolean(storedTheme));
 
     themeToggle.addEventListener('click', () => {
         setTheme(body.dataset.theme === 'light' ? 'dark' : 'light');
@@ -240,11 +239,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('resize', () => {
         initCanvas();
-    });
-
-    prefersLight.addEventListener('change', (event) => {
-        if (!localStorage.getItem('theme')) {
-            setTheme(event.matches ? 'light' : 'dark', false);
-        }
     });
 });
