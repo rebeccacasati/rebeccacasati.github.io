@@ -783,6 +783,28 @@ footer {
         flex-direction: column;
         gap: 0.35rem;
     }
+
+    .outline-card .participation-subheader {
+        flex-direction: column;
+        gap: 0.35rem;
+    }
+
+    .outline-card .timeline-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .outline-card .location {
+        order: 1;
+        width: auto;
+        margin-top: 0;
+    }
+
+    .outline-card .role {
+        order: 2;
+    }
     
     .footer-content {
         flex-direction: column;
