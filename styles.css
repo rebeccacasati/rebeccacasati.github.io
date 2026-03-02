@@ -530,7 +530,7 @@ nav.scrolled {
 }
 
 .outline-card .role {
-    color: var(--accent-blue);
+    color: var(--text-muted);
     font-family: var(--font-mono);
     font-size: 0.85rem;
     margin: 0;
