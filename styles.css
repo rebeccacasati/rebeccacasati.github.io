@@ -46,8 +46,8 @@
 }
 
 body[data-theme='light'] {
-    --bg-dark: #fcfcfd;
-    --bg-light: #eef2f6;
+    --bg-dark: #e7ebf0;
+    --bg-light: #d7dee7;
     --text-main: #101828;
     --text-muted: #526076;
     --accent-blue: #14c8a8;
@@ -59,13 +59,13 @@ body[data-theme='light'] {
     --logo-border: rgba(16, 24, 40, 0.18);
     --panel-shadow: rgba(15, 23, 42, 0.08);
     --panel-glow: rgba(20, 200, 168, 0.14);
-    --nav-scrolled-bg: rgba(252, 252, 253, 0.72);
-    --nav-mobile-bg: rgba(252, 252, 253, 0.84);
+    --nav-scrolled-bg: rgba(231, 235, 240, 0.78);
+    --nav-mobile-bg: rgba(231, 235, 240, 0.9);
     --page-background:
-        radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.95), transparent 28%),
-        radial-gradient(circle at 85% 10%, rgba(229, 236, 245, 0.82), transparent 24%),
-        radial-gradient(circle at 70% 65%, rgba(255, 255, 255, 0.72), transparent 30%),
-        linear-gradient(135deg, #ffffff 0%, #f6f7f9 34%, #edf1f5 67%, #ffffff 100%);
+        radial-gradient(circle at 15% 20%, rgba(245, 248, 251, 0.88), transparent 28%),
+        radial-gradient(circle at 85% 10%, rgba(213, 221, 232, 0.78), transparent 24%),
+        radial-gradient(circle at 70% 65%, rgba(240, 244, 248, 0.62), transparent 30%),
+        linear-gradient(135deg, #eef2f6 0%, #e6ebf1 34%, #dde4ec 67%, #edf1f5 100%);
     --heading-solid: #101828;
     --hero-gradient-start: #101828;
     --hero-gradient-end: #526076;
