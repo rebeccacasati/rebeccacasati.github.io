@@ -567,10 +567,8 @@ nav.scrolled {
     margin-bottom: 1rem;
 }
 
-.card .date {
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    color: var(--accent-purple);
+.card > .timeline-date {
+    display: inline-block;
     margin-bottom: 0.5rem;
 }
 
