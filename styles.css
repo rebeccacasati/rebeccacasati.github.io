@@ -545,6 +545,10 @@ nav.scrolled {
     overflow: hidden;
 }
 
+.card-full {
+    grid-column: 1 / -1;
+}
+
 .card-icon {
     font-size: 2rem;
     color: var(--accent-blue);
@@ -588,7 +592,14 @@ nav.scrolled {
     color: var(--text-muted);
 }
 
-.card .thesis strong {
+.card .education-detail {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.card .thesis strong,
+.card .education-detail strong {
     color: var(--text-main);
 }
 
