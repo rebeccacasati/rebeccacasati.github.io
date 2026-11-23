@@ -16,6 +16,8 @@ nav { border-bottom: 1px solid var(--line); }
 .home-link { font-weight: 600; text-decoration: none; color: var(--text); }
 .nav-actions { margin-left: auto; display: flex; gap: .65rem; }
 button { font: inherit; font-size: .875rem; color: var(--text); border: 1px solid var(--line); background: var(--bg); padding: .5rem .8rem; border-radius: 3px; cursor: pointer; min-height: 44px; }
+.theme-toggle { background: #151b23; color: #e6ebf1; border-color: #394654; }
+:root[data-theme="dark"] .theme-toggle { background: #fafbfc; color: #202a35; border-color: #d5dce4; }
 [hidden] { display: none !important; }
 .nav-links { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; width: 100%; }
 .nav-links a { font-size: .875rem; text-decoration: none; display: inline-block; padding: .25rem 0; }
