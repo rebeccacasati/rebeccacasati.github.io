@@ -8,7 +8,7 @@ let savedTheme;
 try { savedTheme = localStorage.getItem('theme'); } catch { /* Storage may be disabled. */ }
 function applyTheme(theme) {
     root.dataset.theme = theme;
-    themeButton.setAttribute('aria-pressed', String(theme === 'dark'));
+    themeButton.textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
 }
 applyTheme(['light', 'dark'].includes(savedTheme) ? savedTheme : (systemTheme.matches ? 'dark' : 'light'));
 themeButton.hidden = false;
